@@ -1,0 +1,63 @@
+package ex_siva;
+
+import java.util.Scanner;
+
+class Student
+{
+	//properties
+	public int studentid;
+	public String name;
+	public String contactno;
+	public String course;
+	public int fees;
+	Student()
+	{}
+	public Student(int studentid, String name, String contactno, String course, int fees) {
+		super();
+		this.studentid = studentid;
+		this.name = name;
+		this.contactno = contactno;
+		this.course = course;
+		this.fees = fees;
+	}
+	public void display()
+	{
+		System.out.println("the details of students is");
+		System.out.println(studentid);
+		System.out.println(name);
+		System.out.println(contactno);
+		System.out.println(course);
+		System.out.println(fees);
+		
+	}
+	public String coursewisestudents()
+	{
+		if(course.equals("cse"))
+		{
+			
+		}
+	
+		return course;
+	}
+}
+
+public class Ex13 {
+
+	public static void main(String[] args) {
+		Student s=new Student(1,"ram","936590642","cse",1000);
+		Student s1=new Student(2,"ram","936590642","cse",2000);
+		Student s2=new Student(3,"ram","936590642","ece",5000);
+		Student s3=new Student(4,"ram","936590642","cse",1000);
+		Student s4=new Student(5,"ram","936590642","ece",7000);
+		s.display();
+		s1.display();
+		s2.display();
+		s3.display();
+		s4.display();
+		s.coursewisestudents();
+		int totalfees=s.fees+s1.fees+s2.fees+s3.fees+s4.fees;
+		System.out.println("the total fees of all the students is:"+totalfees);
+		
+	}
+
+}
